@@ -2,14 +2,18 @@
 </div>
 	<img src="./logo.jpg" alt="Logo del Proyecto" width="600"/>
 	<br/>
-	<hr/>
-	<h3>🔎 Vista previa del proyecto</h3>
-	<div>
-		<img src="https://res.cloudinary.com/dvwpxy4kh/image/upload/v1764052430/Screen_proyecto_3_dj5kmb.jpg" alt="Vista previa 1" width="280"/>
-		<img src="https://res.cloudinary.com/dvwpxy4kh/image/upload/v1764052430/Screen_3_proyecto_3_imrr6l.jpg" alt="Vista previa 2" width="280"/>
-		<img src="https://res.cloudinary.com/dvwpxy4kh/image/upload/v1764052430/Screen_2_proyecto_3_jro5tf.jpg" alt="Vista previa 3" width="280"/>
-		<img src="https://res.cloudinary.com/dvwpxy4kh/image/upload/v1764052430/Screen_4_proyecto_3_oxdq4y.jpg" alt="Vista previa 4" width="280"/>
-	</div>
+		<hr/>
+		<h3>🔎 Vista previa del proyecto</h3>
+		<table>
+			<tr>
+				<td><img src="https://res.cloudinary.com/dvwpxy4kh/image/upload/v1764052430/Screen_proyecto_3_dj5kmb.jpg" alt="Vista previa 1" width="320"/></td>
+				<td><img src="https://res.cloudinary.com/dvwpxy4kh/image/upload/v1764052430/Screen_3_proyecto_3_imrr6l.jpg" alt="Vista previa 2" width="320"/></td>
+			</tr>
+			<tr>
+				<td><img src="https://res.cloudinary.com/dvwpxy4kh/image/upload/v1764052430/Screen_2_proyecto_3_jro5tf.jpg" alt="Vista previa 3" width="320"/></td>
+				<td><img src="https://res.cloudinary.com/dvwpxy4kh/image/upload/v1764052430/Screen_4_proyecto_3_oxdq4y.jpg" alt="Vista previa 4" width="320"/></td>
+			</tr>
+		</table>
 	<h1>🎨 Proyecto 3 - Gestión de Turnos y Usuarios</h1>
 	<p>Plataforma web para la gestión de turnos y usuarios, desarrollada con <b>Vite + React</b> y <b>Express + TypeORM</b>.</p>
 </div>
