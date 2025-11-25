@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Bebas+Neue&family=Fredoka+One&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+.footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 50px 0 0 0;
+    margin-top: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footerSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionTitle {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.6rem;
+    color: #ff6b6b;
+    text-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.description {
+    color: #cccccc;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    margin: 0;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.addressContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.addressLabel {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.address {
+    color: #cccccc;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.mapLink {
+    color: #ff6b6b;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    border-radius: 6px;
+    background: rgba(255, 107, 107, 0.1);
+    margin-top: 8px;
+}
+
+.mapLink:hover {
+    color: #ffffff;
+    background: rgba(255, 107, 107, 0.8);
+    border-color: #ff6b6b;
+    text-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.linksList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.linksList li {
+    margin: 0;
+}
+
+.linksList a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.linksList a:hover {
+    color: #ff6b6b;
+    text-shadow: 0 0 8px rgba(255, 107, 107, 0.4);
+}
+
+.socialLinks {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.socialLink {
+    width: 45px;
+    height: 45px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+    background-color: #ff6b6b;
+    transform: translateY(-2px);
+}
+
+.untapLogo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px;
+    background-color: #262626;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.logoImage {
+    width: 55px;
+    height: 55px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #333;
+}
+
+.logoText {
+    display: flex;
+    flex-direction: column;
+}
+
+.logoTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ff6b6b;
+    text-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.logoSubtitle {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.footerBottom {
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    text-align: center;
+    background-color: #1a1a1a;
+}
+
+.footerBottom p {
+    margin: 0;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        margin-top: 40px;
+        padding: 30px 0 0 0;
+    }
+
+    .footerContent {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 15px;
+    }
+
+    .sectionTitle {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .untapLogo {
+        padding: 12px;
+    }
+
+    .logoImage {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logoTitle {
+        font-size: 1.5rem;
+    }
+
+    .logoSubtitle {
+        font-size: 0.75rem;
+    }
+
+    .socialLinks {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+}

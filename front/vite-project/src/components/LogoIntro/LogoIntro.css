@@ -1,0 +1,40 @@
+.logo-intro {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  z-index: 3;
+  animation: zoomFade 3s ease-in-out forwards;
+}
+
+.logo-intro img {
+  width: 180px;
+  height: auto;
+}
+
+.logo-intro.hide {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.logo-intro.animation-complete {
+  animation: none;
+  transform: scale(1);
+  opacity: 1;
+}
+
+@keyframes zoomFade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

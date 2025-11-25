@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+.cardsSection {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d30 100%);
+  padding: 100px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionTitle {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3rem;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+  margin-bottom: 60px;
+  letter-spacing: 3px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sectionTitle.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.cardsGrid.animate .card {
+  animation: slideInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 107, 107, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 107, 107, 0.6);
+  box-shadow: 0 20px 50px rgba(255, 107, 107, 0.2);
+}
+
+.cardImage {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .cardImage img {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.cardContent h3 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(255, 107, 107, 0.2);
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.cardContent p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 25px;
+}
+
+.cardButton {
+  background: rgba(255, 107, 107, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 107, 107, 0.5);
+  padding: 12px 30px;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+}
+
+.cardButton:hover {
+  background: rgba(255, 107, 107, 0.2);
+  border-color: #ff6b6b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+  text-shadow: 0 0 10px rgba(255, 107, 107, 0.8);
+}
+
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+  
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .cardImage {
+    height: 250px;
+  }
+  
+  .cardContent {
+    padding: 30px 20px;
+  }
+  
+  .cardsSection {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .cardContent h3 {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,215 @@
+.teamContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px 20px;
+    flex: 1;
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modalContent {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(45, 45, 45, 0.95));
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: auto;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.closeButton {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: rgba(255, 107, 107, 0.2);
+    border: 2px solid #ff6b6b;
+    color: #ffffff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+    background: #ff6b6b;
+    transform: scale(1.1);
+}
+
+.modalBody {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.modalImage {
+    flex-shrink: 0;
+}
+
+.modalImage img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.modalInfo {
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    flex: 1;
+}
+
+.modalInfo h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ff6b6b;
+    letter-spacing: 2px;
+}
+
+.modalInfo h3 {
+    font-size: 1.3rem;
+    color: #cccccc;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.experience {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.experience strong {
+    color: #ff6b6b;
+    font-weight: 600;
+}
+
+.description {
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+.portfolio {
+    margin-bottom: 20px;
+}
+
+.portfolio strong {
+    color: #ff6b6b;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 10px rgba(255, 107, 107, 0.3);
+}
+
+.social {
+    font-size: 1rem;
+}
+
+.social strong {
+    color: #ff6b6b;
+    font-weight: 600;
+}
+
+.instagram {
+    color: #e1306c;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+
+@media (max-width: 768px) {
+    .teamContainer {
+        padding: 0 15px 30px 15px;
+    }
+    
+    .teamGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .modalContent {
+        padding: 25px;
+        max-width: 95vw;
+    }
+    
+    .modalBody {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+    
+    .modalImage img {
+        width: 200px;
+        height: 240px;
+    }
+    
+    .modalInfo h2 {
+        font-size: 2rem;
+    }
+    
+    .tags {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .modalImage img {
+        width: 150px;
+        height: 180px;
+    }
+    
+    .modalInfo h2 {
+        font-size: 1.7rem;
+    }
+    
+    .modalInfo h3 {
+        font-size: 1.1rem;
+    }
+}

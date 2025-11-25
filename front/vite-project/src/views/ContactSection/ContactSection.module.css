@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+.contactPage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactSection {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d30 100%);
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+}
+
+.contactSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 107, 107, 0.05) 0%, transparent 70%);
+    z-index: 1;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.title.animate {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 4px 15px rgba(255, 107, 107, 0.4), 0 0 30px rgba(255, 107, 107, 0.2);
+}
+
+.formContainer {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+}
+
+.formContainer.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contactForm {
+    background: linear-gradient(135deg, rgba(42, 42, 42, 0.8), rgba(31, 31, 31, 0.8));
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 107, 107, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.inputGroup {
+    margin-bottom: 25px;
+}
+
+.label {
+    display: block;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(255, 107, 107, 0.2);
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: 15px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    border-radius: 10px;
+    color: #ffffff;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: #aaaaaa;
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 15px 30px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    background: rgba(255, 107, 107, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 107, 107, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.submitButton:hover {
+    background: rgba(255, 107, 107, 0.2);
+    border-color: #ff6b6b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+    text-shadow: 0 0 10px rgba(255, 107, 107, 0.8);
+}
+
+.submitButton:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .contactSection {
+        padding: 100px 0 60px;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+    
+    .contactForm {
+        padding: 30px 20px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+    
+    .label {
+        font-size: 1.1rem;
+    }
+    
+    .input,
+    .textarea {
+        padding: 12px 15px;
+    }
+    
+    .submitButton {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+}

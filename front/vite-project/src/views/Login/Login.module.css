@@ -1,0 +1,301 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+.container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 40px 20px; 
+}
+
+.loginCard {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 450px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 30px;
+}
+
+.header h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+    font-size: 1.1rem;
+    margin: 0;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.form {
+    padding: 40px 30px;
+}
+
+.inputGroup {
+    margin-bottom: 25px;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #fff;
+    box-sizing: border-box;
+    position: relative;
+    transform: scale(1);
+}
+
+.inputGroup input:focus {
+    outline: none;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.15);
+    background-color: #fefefe;
+    transform: scale(1.01);
+}
+
+.inputGroup input:hover:not(:focus) {
+    border-color: #cccccc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inputGroup input.error {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0) scale(1); }
+    25% { transform: translateX(-5px) scale(1); }
+    75% { transform: translateX(5px) scale(1); }
+}
+
+.passwordInputContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.passwordInputContainer input {
+    padding-right: 50px; 
+}
+
+.togglePasswordButton {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1);
+}
+
+.togglePasswordButton:hover {
+    color: #ff6b6b;
+    background-color: rgba(255, 107, 107, 0.1);
+    transform: scale(1.1);
+}
+
+.togglePasswordButton:focus {
+    outline: none;
+    color: #ff6b6b;
+    background-color: rgba(255, 107, 107, 0.1);
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
+}
+
+.togglePasswordButton:active {
+    transform: scale(0.95);
+    transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.errorMessage {
+    display: block;
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.message {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Bebas Neue', cursive;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0px) scale(1);
+}
+
+.submitButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submitButton:hover:not(:disabled) {
+    background: linear-gradient(135deg, #ee5a5a 0%, #dc4c4c 100%);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+}
+
+.submitButton:hover:not(:disabled)::before {
+    left: 100%;
+}
+
+.submitButton:active:not(:disabled) {
+    transform: translateY(-1px) scale(1.01);
+    transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submitButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.submitButton:disabled::before {
+    display: none;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 25px 30px;
+    border-top: 1px solid #e9ecef;
+}
+
+.footer p {
+    margin: 0 0 10px 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.footer p:last-child {
+    margin-bottom: 0;
+}
+
+.footer a {
+    color: #ff6b6b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ee5a5a;
+    text-decoration: underline;
+}
+
+.forgotPassword {
+    font-size: 0.9rem !important;
+    opacity: 0.8;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 100px 15px 20px 15px;
+    }
+    
+    .loginCard {
+        margin: 0;
+    }
+    
+    .header {
+        padding: 30px 20px;
+    }
+    
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .form {
+        padding: 30px 20px;
+    }
+    
+    .footer {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .header p {
+        font-size: 1rem;
+    }
+    
+    .form {
+        padding: 20px 15px;
+    }
+}
