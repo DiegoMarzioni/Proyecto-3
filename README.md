@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Proyecto" width="600"/>
+	<img src="front/vite-project/src/assets/logoAnimacion2.png" alt="Logo del Proyecto" width="220"/>
 	<h1>🎨 Proyecto 3 - Gestión de Turnos y Usuarios</h1>
 	<p>Plataforma web para la gestión de turnos y usuarios, desarrollada con <b>Vite + React</b> y <b>Express + TypeORM</b>.</p>
 </div>
